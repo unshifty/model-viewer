@@ -1,0 +1,271 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="face_test|Win32">
+      <Configuration>face_test</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="face_test|x64">
+      <Configuration>face_test</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\src\defaultfragshader.frag" />
+    <None Include="..\src\defaultvertshader.vert" />
+    <None Include="..\src\phongfragshader.frag" />
+    <None Include="..\src\phongvertshader.vert">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</DeploymentContent>
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='face_test|x64'">false</ExcludedFromBuild>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='face_test|x64'">false</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\ext\imgui\imgui.cpp" />
+    <ClCompile Include="..\ext\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\src\imgui_impl_sdl_gl3.cpp" />
+    <ClCompile Include="..\src\main.cpp" />
+    <ClCompile Include="..\src\tiny_obj_loader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\src\imgui_impl_sdl_gl3.h" />
+    <ClInclude Include="..\src\main.h" />
+    <ClInclude Include="..\src\tiny_obj_loader.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5C7E1D9C-8F18-43E0-AEA0-D41E53B9A8DD}</ProjectGuid>
+    <RootNamespace>model_viewer</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='face_test|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='face_test|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='face_test|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='face_test|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\_Proj\model-viewer\ext\sdl_2.0.5\include;C:\_Proj\model-viewer\ext\glew_2.0.0\include;C:\_Proj\model-viewer\ext\glm_0.9.8.3;c:\_Proj\model-viewer\ext\imgui;c:\_proj\model-viewer\ext\assimp_3.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\_Proj\model-viewer\ext\glew_2.0.0\lib\release\Win32;C:\_Proj\model-viewer\ext\sdl_2.0.5\lib;c:\_proj\model-viewer\ext\assimp_3.3.1\bin\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;glew32.lib;opengl32.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /d /y /i $(SolutionDir)\ext\sdl_2.0.5\lib\sdl2.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\glew_2.0.0\bin\release\win32\glew32.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\assimp_3.3.1\bin\x86\assimp-vc140-mt.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.vert $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.frag $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\_Proj\model-viewer\ext\sdl_2.0.5\include;C:\_Proj\model-viewer\ext\glew_2.0.0\include;C:\_Proj\model-viewer\ext\glm_0.9.8.3;c:\_Proj\model-viewer\ext\imgui;c:\_proj\model-viewer\ext\assimp_3.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\_Proj\model-viewer\ext\glew_2.0.0\lib\release\x64;C:\_Proj\model-viewer\ext\sdl_2.0.5\lib;c:\_proj\model-viewer\ext\assimp_3.3.1\bin\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;glew32.lib;opengl32.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /d /y /i $(SolutionDir)..\ext\sdl_2.0.5\lib\sdl2.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\glew_2.0.0\bin\release\x64\glew32.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\assimp_3.3.1\bin\x64\assimp-vc140-mt.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.vert $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.frag $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\_Proj\model-viewer\ext\sdl_2.0.5\include;C:\_Proj\model-viewer\ext\glew_2.0.0\include;C:\_Proj\model-viewer\ext\glm_0.9.8.3;c:\_Proj\model-viewer\ext\imgui;c:\_proj\model-viewer\ext\assimp_3.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\_Proj\model-viewer\ext\glew_2.0.0\lib\release\Win32;C:\_Proj\model-viewer\ext\sdl_2.0.5\lib;c:\_proj\model-viewer\ext\assimp_3.3.1\bin\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;glew32.lib;opengl32.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /d /y /i $(SolutionDir)..\ext\sdl_2.0.5\lib\sdl2.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\glew_2.0.0\bin\release\win32\glew32.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\assimp_3.3.1\bin\x86\assimp-vc140-mt.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.vert $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.frag $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='face_test|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\_Proj\model-viewer\ext\sdl_2.0.5\include;C:\_Proj\model-viewer\ext\glew_2.0.0\include;C:\_Proj\model-viewer\ext\glm_0.9.8.3;c:\_Proj\model-viewer\ext\imgui;c:\_proj\model-viewer\ext\assimp_3.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\_Proj\model-viewer\ext\glew_2.0.0\lib\release\Win32;C:\_Proj\model-viewer\ext\sdl_2.0.5\lib;c:\_proj\model-viewer\ext\assimp_3.3.1\bin\x86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;glew32.lib;opengl32.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /d /y /i $(SolutionDir)..\ext\sdl_2.0.5\lib\sdl2.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\glew_2.0.0\bin\release\win32\glew32.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\assimp_3.3.1\bin\x86\assimp-vc140-mt.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.vert $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.frag $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\_Proj\model-viewer\ext\sdl_2.0.5\include;C:\_Proj\model-viewer\ext\glew_2.0.0\include;C:\_Proj\model-viewer\ext\glm_0.9.8.3;c:\_Proj\model-viewer\ext\imgui;c:\_proj\model-viewer\ext\assimp_3.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\_Proj\model-viewer\ext\glew_2.0.0\lib\release\x64;C:\_Proj\model-viewer\ext\sdl_2.0.5\lib;c:\_proj\model-viewer\ext\assimp_3.3.1\bin\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;glew32.lib;opengl32.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /d /y /i $(SolutionDir)..\ext\sdl_2.0.5\lib\sdl2.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\glew_2.0.0\bin\release\x64\glew32.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\assimp_3.3.1\bin\x64\assimp-vc140-mt.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.vert $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.frag $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='face_test|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\_Proj\model-viewer\ext\sdl_2.0.5\include;C:\_Proj\model-viewer\ext\glew_2.0.0\include;C:\_Proj\model-viewer\ext\glm_0.9.8.3;c:\_Proj\model-viewer\ext\imgui;c:\_proj\model-viewer\ext\assimp_3.3.1\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\_Proj\model-viewer\ext\glew_2.0.0\lib\release\x64;C:\_Proj\model-viewer\ext\sdl_2.0.5\lib;c:\_proj\model-viewer\ext\assimp_3.3.1\bin\x64;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sdl2.lib;sdl2main.lib;glew32.lib;opengl32.lib;assimp-vc140-mt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Console</SubSystem>
+    </Link>
+    <PreBuildEvent>
+      <Command>xcopy /d /y /i $(SolutionDir)..\ext\sdl_2.0.5\lib\sdl2.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\glew_2.0.0\bin\release\x64\glew32.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\ext\assimp_3.3.1\bin\x64\assimp-vc140-mt.dll $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.vert $(OutDir)
+xcopy /d /y /i $(SolutionDir)..\src\*.frag $(OutDir)</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
